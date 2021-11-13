@@ -39,4 +39,21 @@ ggplot(data = ucsb_grad,
        y= "Number of Domestic students")
 
 ```
+Tommy (Partner 1):
+```{r}
+# updating the graph, Adding title, setting theme to theme_minimal(), and adding a figure caption
+
+ggplot(data = ucsb_grad, 
+       aes(x= year_abbr, y= domestic_enrollment)) +
+  geom_col(aes(fill = ethnicity), position = "fill") +
+  labs(x = "Enrollment Year",
+       y= "Number of Domestic students", 
+       title = "Domestic Student Enrollment by Ethnicity per Year", 
+       caption = "Figure 1: Domestic Student Enrollment by Ethnicity per year: 
+       Column graph depicting the number of domestic students who have enrolled
+       at UC Santa Barbara per year from 2008-2019, categorized by Ethnicity. 
+       Majority of students enrolled are white, with a growing population of 
+       Asian/Pacific Islander students since 2008.") + 
+  theme_minimal()
+```
 
